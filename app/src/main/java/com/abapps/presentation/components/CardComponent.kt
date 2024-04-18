@@ -1,4 +1,4 @@
-package com.abapps.components
+package com.abapps.presentation.components
 
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.ColumnScope

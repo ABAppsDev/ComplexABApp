@@ -1,4 +1,4 @@
-package com.abapps.components
+package com.abapps.presentation.components
 
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.fillMaxSize
@@ -6,7 +6,7 @@ import androidx.compose.foundation.lazy.LazyColumn
 import androidx.compose.foundation.lazy.items
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
-import com.abapps.model.PostModel
+import com.abapps.presentation.model.PostModel
 
 @Composable
 fun HomeComponent(postList: List<PostModel>) {

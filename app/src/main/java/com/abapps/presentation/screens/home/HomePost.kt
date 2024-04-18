@@ -1,12 +1,12 @@
-package com.abapps.home
+package com.abapps.presentation.screens.home
 
 import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.wrapContentSize
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
-import com.abapps.components.HomeComponent
-import com.abapps.other.ConstantLists
+import com.abapps.presentation.components.HomeComponent
+import com.abapps.presentation.utils.ConstantLists
 
 @Composable
 fun HomePost() {
