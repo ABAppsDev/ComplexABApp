@@ -6,7 +6,7 @@ import androidx.compose.foundation.lazy.LazyColumn
 import androidx.compose.foundation.lazy.items
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
-import com.abapps.presentation.model.PostModel
+import com.abapps.data.model.PostModel
 
 @Composable
 fun HomeComponent(postList: List<PostModel>) {

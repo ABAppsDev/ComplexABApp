@@ -12,17 +12,7 @@ class MainActivity : ComponentActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContent {
-//            ABAppsTheme {
                 Navigator(screen = HomeScreen)
-//            }
         }
     }
-}
-
-@Preview(showBackground = true)
-@Composable
-fun GreetingPreview() {
-//    ABAppsTheme {
-        Navigator(screen = HomeScreen)
-//    }
 }

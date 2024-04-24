@@ -1,12 +1,10 @@
 package com.abapps.presentation.components
 
 import androidx.compose.foundation.Image
-import androidx.compose.foundation.background
 import androidx.compose.foundation.border
 import androidx.compose.foundation.layout.size
 import androidx.compose.foundation.shape.CircleShape
 import androidx.compose.runtime.Composable
-import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.clip
 import androidx.compose.ui.graphics.Color
@@ -20,12 +18,11 @@ fun ImageUser(
     contentDescription: String,
     contentScale: ContentScale,
     modifier: Modifier = Modifier
+        .size(60.dp)
+        .clip(CircleShape)
+        .border(width = 1.dp, color = Color.White, shape = CircleShape)
 ) {
     Image(
-        modifier = modifier
-            .size(40.dp)
-            .clip(CircleShape)
-            .border(width = 1.dp, color = Color.White, shape = CircleShape),
         painter = image,
         contentDescription = contentDescription,
         contentScale = contentScale
