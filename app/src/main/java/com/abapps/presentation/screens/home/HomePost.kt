@@ -2,11 +2,10 @@ package com.abapps.presentation.screens.home
 
 import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.fillMaxSize
-import androidx.compose.foundation.layout.wrapContentSize
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import com.abapps.presentation.components.HomeComponent
-import com.abapps.presentation.utils.ConstantLists
+import com.abapps.presentation.utils.Constants
 
 @Composable
 fun HomePost() {
@@ -15,15 +14,11 @@ fun HomePost() {
 
 @Composable
 fun HomePostContent() {
-
     Box(
-        modifier = Modifier
-            .fillMaxSize()
-            .wrapContentSize()
+        modifier = Modifier.fillMaxSize()
     ) {
         HomeComponent(
-            postList = ConstantLists.post
+            postList = Constants.post
         )
     }
-
 }
