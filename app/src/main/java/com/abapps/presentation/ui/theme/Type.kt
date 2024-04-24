@@ -1,4 +1,4 @@
-package com.abapps.ui.theme
+package com.abapps.presentation.ui.theme
 
 import androidx.compose.material3.Typography
 import androidx.compose.ui.text.TextStyle
