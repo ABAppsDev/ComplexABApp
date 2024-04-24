@@ -23,22 +23,13 @@ import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
+import coil.compose.AsyncImage
 import com.abapps.R
+import com.abapps.data.model.CatItem
 
 @Composable
 fun ItemPostCard(
-    imagePostLarge: Int,
-    imagePostSmallOne: Int,
-    imagePostSmallTwo: Int,
-    imagePostSmallThree: Int,
-    textPost: String,
-    imageUser: Int,
-    nameUser: String,
-    nickNameUser: String,
-    data: String,
-    likeNumber: Int,
-    saveNumber: Int,
-    shareNumber: Int
+    cats: CatItem
 ) {
     Card(
         modifier = Modifier
@@ -53,45 +44,46 @@ fun ItemPostCard(
             horizontalAlignment = Alignment.CenterHorizontally
         ) {
             UserPost(
-                imageUser = imageUser,
-                nameUser = nameUser,
-                nickNameUser = nickNameUser
+                imageUser = R.drawable.ic_dome,
+                nameUser = "Mostafa Mohamed",
+                nickNameUser = "@mostafa_mohamed"
             )
-            ImagePost(
-                image = painterResource(id = imagePostLarge),
-                contentDescription = "image large",
-                modifier = Modifier.fillMaxWidth().height(250.dp)
+
+            AsyncImage(
+                modifier = Modifier.clip(RoundedCornerShape(15.dp)),
+                model = cats.url,
+                contentDescription = "image large"
             )
 
             Row(
                 modifier = Modifier.fillMaxWidth(), horizontalArrangement = Arrangement.SpaceBetween
             ) {
                 ImagePost(
-                    image = painterResource(id = imagePostSmallOne),
+                    image = painterResource(id = R.drawable.palestine),
                     contentDescription = "image small one"
                 )
                 ImagePost(
-                    image = painterResource(id = imagePostSmallTwo),
+                    image = painterResource(id = R.drawable.palestine),
                     contentDescription = "image small two"
                 )
                 ImagePost(
-                    image = painterResource(id = imagePostSmallThree),
+                    image = painterResource(id = R.drawable.palestine),
                     contentDescription = "image small three"
                 )
             }
             Text(
                 modifier = Modifier.fillMaxWidth(),
-                text = textPost,
+                text = "Palestine has been free since 1988",
                 fontSize = 17.sp,
                 color = Color.Black,
                 fontWeight = FontWeight.SemiBold,
                 textAlign = TextAlign.Center
             )
             UserInfoPost(
-                date = data,
-                likeNumber = likeNumber,
-                saveNumber = saveNumber,
-                shareNumber = shareNumber
+                date = cats.id,
+                likeNumber = 5,
+                saveNumber = 7,
+                shareNumber = 10
             )
         }
     }
